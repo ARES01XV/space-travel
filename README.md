@@ -1,3 +1,11 @@
+# Project Details
+Name: Prince Willis
+Topic: **SPACE TRAVEL**
+
+##   Homepage Screenshots
+![image](https://user-images.githubusercontent.com/89715340/163002085-c435393b-ed85-48d5-b83f-62fdc620c6a0.png)
+![image](https://user-images.githubusercontent.com/89715340/163002495-fbacdfa7-07bb-4626-8172-93aa1983dc14.png)
+
 # SpaceTravel
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
