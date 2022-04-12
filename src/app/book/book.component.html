@@ -1,0 +1,100 @@
+<div class="container">
+    <h1>Affordable shuttle rates available</h1>
+
+    <section>
+        <div class="left">
+            <form [formGroup]="reservationForm">
+                <h2>Voyage Details</h2><br>
+                <!-- <div class="radio">
+                    <div>
+                        <input name="radio" type="radio">
+                        <label>Roundtrip</label>
+                    </div>
+                    <div>
+                        <button (click)="oneway()">One-way</button>
+
+                        <input name="radio" type="radio">
+                        <label (click)="oneway()">One-way</label>
+                    </div>
+                </div><br> -->
+                <div class="width-edit">
+                    <div class="from">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <select formControlName="from">
+                            <option disabled selected>Leaving from</option>
+                            <option>Coruscant, Mercury</option>
+                            <option>Tokyo, Earth</option>
+                            <option>USA, Earth</option>
+                            <option>Africa, Earth</option>
+                            <option>Chyrse, Mars</option>
+                            <option>Gotham, Titan</option>
+                            <option>kamar-Taj, Titan</option>
+                            <option>Transylvania, Titan</option>
+                        </select>
+                    </div><br>
+                    
+                    <div class="to">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <select formControlName="to">
+                            <option disabled selected>Going to</option>
+                            <option>Coruscant, Mercury</option>
+                            <option>Tokyo, Earth</option>
+                            <option>USA, Earth</option>
+                            <option>Africa, Earth</option>
+                            <option>Chyrse, Mars</option>
+                            <option>Gotham, Titan</option>
+                            <option>kamar-Taj, Titan</option>
+                            <option>Transylvania, Titan</option>
+                        </select>
+                    </div><br>
+                    
+                    <input formControlName="departure" type="text" placeholder="Departing"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"><br><br>
+                    
+                    <input type="text" placeholder="Returning"
+                    onfocus="(this.type='date')"
+                    onblur="(this.type='text')"><br><br>
+                    
+                    <button (click)="addReservation()">Reserve</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="right">
+            <button (click)="openBox()">
+                Reservations
+                <i class="fa-solid fa-angle-down"></i>
+            </button><br><br>
+
+            <div *ngIf="isDisplay" class="box">
+
+                <table [ngStyle]="{'width':'100%', 'background':'rgba(255, 255, 255, 0.3)','border-radius':'20px','overflow':'hidden'}" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                
+                                  
+                    <!-- From Column -->
+                    <ng-container matColumnDef="from">
+                        <th [ngStyle]="{'color':'black','font-size':'16px'}" mat-header-cell *matHeaderCellDef> From </th>
+                        <td [ngStyle]="{'color':'black'}" mat-cell *matCellDef="let row"> {{row.from}} </td>
+                    </ng-container>
+                
+                    <!-- To Column -->
+                    <ng-container matColumnDef="to">
+                        <th [ngStyle]="{'color':'black','font-size':'16px'}" mat-header-cell *matHeaderCellDef> To </th>
+                        <td [ngStyle]="{'color':'black'}" mat-cell *matCellDef="let row"> {{row.to}} </td>
+                    </ng-container>
+                
+                    <!-- Departure Column -->
+                    <ng-container matColumnDef="departure">
+                        <th [ngStyle]="{'color':'black','font-size':'16px'}" mat-header-cell *matHeaderCellDef> Departure </th>
+                        <td [ngStyle]="{'color':'black'}" mat-cell *matCellDef="let row"> {{row.departure}} </td>
+                    </ng-container>
+                                
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+
+            </div>
+        </div>
+    </section>
+</div>

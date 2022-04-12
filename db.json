@@ -1,0 +1,26 @@
+{
+  "reservationList": [
+    {
+      "from": "Africa, Earth",
+      "to": "Gotham, Titan",
+      "departure": "2022-04-09",
+      "id": 3
+    },
+    {
+      "from": "USA, Earth",
+      "to": "Tokyo, Earth",
+      "departure": "2022-04-30",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

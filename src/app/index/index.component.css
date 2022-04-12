@@ -1,0 +1,137 @@
+.container{
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 82vh;
+    margin: auto;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 150%;
+}
+
+h2{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* MEDUSA************************ */
+.medusa{
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    width: 28%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
+}
+.medusa img{
+    width: 100%;
+    position: absolute;
+    top: -25%;
+}
+.medusa p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+
+/* BUBBLE************************ */
+.bubble{
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    width: 28%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
+}
+.bubble img{
+    width: 100%;
+    position: absolute;
+    top: -25%;
+}
+.bubble p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
+/* LION************************ */
+.eagle{
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    width: 28%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
+}
+.eagle img{
+    width: 120%;
+    position: absolute;
+    top: -25%;
+}
+.eagle p{
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+/* ANIMATION************************ */
+.front,
+.back {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  transition: ease-in-out 1s;
+  cursor: pointer;
+}
+
+.back {
+  background: #fff;
+  transform: rotateY(-180deg);
+  padding: 5%;
+}
+
+.back p{
+    position: absolute;
+    top: 20%;
+    /* transform: translateY(-50%); */
+    /* right: 15%; */
+    margin-left: auto;
+    color: black;
+    line-height: 120%;
+}
+
+.medusa:hover .front, .bubble:hover .front, .eagle:hover .front {
+  transform: rotateY(180deg);
+}
+
+
+.medusa:hover .back, .bubble:hover .back, .eagle:hover .back {
+  transform: rotateY(0deg);
+}

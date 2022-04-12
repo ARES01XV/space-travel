@@ -1,0 +1,80 @@
+.container{
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 82vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+    /* border: 1px solid red; */
+    width: 50%;
+}
+
+.top h1{
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 150%;
+}
+.top p{
+    color: white;
+    text-align: center;
+}
+
+.left p{
+    color: white;
+    text-align: center;
+}
+
+.right{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    /* background: rgba(255, 255, 255, 0.5); */
+}
+
+/* ROTATING PLANET ******************* */
+#titan {
+  width: 300px;
+  height: 300px;
+  
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left:25%;
+    
+  background: url(https://cdn.discordapp.com/attachments/882362353507778613/960767660092690462/titan_texture.jpg);
+  border-radius: 50%;
+  background-size: 610px;
+  box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+  animation-name: rotate;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotate;
+     -webkit-animation-duration: 12s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: linear;
+}
+@keyframes rotate {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}

@@ -1,0 +1,122 @@
+/* HEADER************************ */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1%;
+    border-bottom: 1px solid grey;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.logo a:hover{
+    color: red;
+}
+
+nav a{
+    /* border: 1px solid red; */
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 0 50px;
+}
+nav a:hover{
+    color: red;
+}
+
+.planets-drpdwn button{
+ /* border: 1px solid red; */
+ padding: 3%;
+ /* background: rgba(255, 255, 255, 0.5); */
+ background: none;
+ color: white;
+ font-size: 20px;
+ outline: none;
+ width: 150px;
+ border: none; 
+ position: relative;
+}
+.planets-drpdwn button:hover{
+    color: red;
+}
+
+.drpdwn{
+    /* border: 1px solid red; */
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 16px;
+    position: absolute;
+    z-index: 9999;
+}
+
+.drpdwn a{
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+}
+.drpdwn a:hover{
+    background: white;
+}
+
+/* .planets-drpdwn option{
+    border-radius: none;
+    color: black;
+    font-size: 16px;
+} */
+
+header>a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: .5%;
+}
+header>a:hover{
+    background: red;
+    border: 2px solid red;
+}
+
+/* FOOTER************************ */
+footer{
+    /* position: sticky;
+    bottom: 0; */
+
+    background: black;
+    color: white;
+    padding: 2%;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+footer a:hover{
+    color: grey;
+}
+
+footer section{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom{
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+}
+.bottom .left a{
+    color: grey;
+    padding: 0 5%;
+}
+.bottom .left a:hover{
+    color: darkgray;
+}

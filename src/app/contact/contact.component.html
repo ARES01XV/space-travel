@@ -1,0 +1,50 @@
+<div class="container">
+    <h1>Get in touch!</h1>
+
+    <div class="form-container">
+        <div class="top">
+            <a href="https://www.google.com/maps/d/u/0/viewer?ie=UTF&msa=0&mid=1oXeDfLYyMtNam-DDeNJAszOAZO0&ll=28.49080566787255%2C-80.589604&z=11" target="_blank">
+                <i class="fa-solid fa-location-dot"></i><br>
+                Cape Canaveral, FL, United States
+            </a>
+            <a href="tel:+">
+                <i class="fa-solid fa-phone"></i><br>
+                +1 310-363-6000
+            </a>
+            <a href="mailto:+">
+                <i class="fa-solid fa-envelope"></i><br>
+                travelspace@mail.com
+            </a>
+        </div><br>
+        <form [formGroup]="contactForm">
+            <section>
+                <div class="left">
+                    <h2>Contact Form</h2>
+                    <div>
+                        <label>Your name</label><br>
+                        <input [class.is-invalid]="contactForm.get('yourName')?.invalid && contactForm.get('yourName')?.touched"formControlName="yourName" type="text" placeholder="Jane Doe"><br>
+                        <small [class.d-none]="contactForm.get('yourName')?.valid || contactForm.get('yourName')?.untouched" class="text-danger">Name is required</small>
+                    </div><br>
+                    <div>
+                        <label>Email</label><br>
+                        <input [class.is-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" formControlName="email" type="email" placeholder="example@mail.com"><br>
+                        <small [class.d-none]="contactForm.get('email')?.valid || contactForm.get('email')?.untouched" class="text-danger">Email is required</small>
+                    </div><br>
+                    <div>
+                        <label>Phone</label><br>
+                        <input [class.is-invalid]="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" formControlName="phone" type="tel" placeholder="+1 (234)567-8900"><br>
+                        <small [class.d-none]="contactForm.get('phone')?.valid || contactForm.get('phone')?.untouched" class="text-danger">Phone is required</small>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <label>Message</label><br>
+                        <textarea [class.is-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" formControlName="message" cols="30" rows="10" placeholder="type your message"></textarea><br>
+                        <small [class.d-none]="contactForm.get('message')?.valid || contactForm.get('message')?.untouched" class="text-danger">Type your message</small>
+                    </div>
+                </div>
+            </section><br>
+            <button (click)="message()" type="submit">Send Message</button>
+        </form>
+    </div>
+</div>

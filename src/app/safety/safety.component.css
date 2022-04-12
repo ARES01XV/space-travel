@@ -1,0 +1,39 @@
+.container{
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 82vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.left{
+    /* border: 1px solid red; */
+    width: 50%;
+}
+
+.left h1{
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 150%;
+}
+
+.left p{
+    color: white;
+    text-align: center;
+}
+
+.right{
+    /* border: 1px solid red; */
+    width: 50%;
+    text-align: center;
+}
+
+.right img{
+    width: 90%;
+    border: 5px solid white;
+}
